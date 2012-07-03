@@ -140,7 +140,8 @@ class PluginTools(object):
     def __get_template_lookup(self):
         return TemplateLookup(
             directories=[
-                os.path.join(self.get_src_dir(), "_templates"), "_templates"],
+                "_templates",
+                os.path.join(self.get_src_dir(), "_templates")],
             input_encoding='utf-8', output_encoding='utf-8',
             encoding_errors='replace')
 
